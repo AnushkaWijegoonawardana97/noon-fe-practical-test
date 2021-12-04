@@ -1,5 +1,12 @@
+@import "mixins";
+
 .newpost__container {
-  padding: 1rem;
+  width: 50%;
+  margin: auto;
+  @include small {
+    width: 100%;
+    padding: 1rem;
+  }
 
   .newpost__container_title {
     text-align: center;
