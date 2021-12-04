@@ -16,7 +16,7 @@ const favourites = () => {
 
   return (
     <div>
-      <section>
+      <section className='main-container'>
         {favourites.map((favourite) => (
           <Post
             key={favourite._id}
