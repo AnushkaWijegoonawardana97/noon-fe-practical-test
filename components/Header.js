@@ -1,4 +1,4 @@
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import classes from "../styles/header.module.scss";
@@ -12,7 +12,14 @@ const Header = () => {
 
       <div className={classes.header__icon_links}>
         <Link href='/favourites'>
-          <FontAwesomeIcon icon={faHeart} />
+          <a className={classes.header__icon_link}>
+            <FontAwesomeIcon icon={faHeart} />
+          </a>
+        </Link>
+        <Link href='/new-post'>
+          <a className={classes.header__icon_link}>
+            <FontAwesomeIcon icon={faPlusCircle} />
+          </a>
         </Link>
       </div>
     </nav>

@@ -1,11 +1,16 @@
+@import "mixins";
+
 .post {
-  border-top: 1px solid #bdc3c7;
   margin: 0.5rem 0rem;
-  &:first-child {
-    margin-top: 0rem;
-  }
-  &:last-child {
-    margin-bottom: 0rem;
+  box-sizing: border-box;
+  @include small {
+    border-top: 1px solid #bdc3c7;
+    &:first-child {
+      margin-top: 0rem;
+    }
+    &:last-child {
+      margin-bottom: 4rem;
+    }
   }
 
   .post__header {
@@ -28,6 +33,16 @@
     }
   }
 
+  .post__body {
+    display: block;
+    min-height: 40vh;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
   .post__footer {
     padding: 0.5rem 1rem;
     .footer__actions {
@@ -36,6 +51,14 @@
       justify-content: flex-start;
       color: #2c3e50;
       margin-bottom: 0.4rem;
+      .footer__actions_liked {
+        border: none;
+        color: #c0392b;
+      }
+      .footer__actions_like {
+        border: none;
+        color: #2c3e50;
+      }
 
       .footer__actions_likes {
         font-size: 1rem;

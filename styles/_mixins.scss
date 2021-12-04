@@ -1,0 +1,26 @@
+// Responsive Settings
+@mixin exsmall {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+@mixin small {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin medium {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+@mixin medium_lg {
+  @media (max-width: 1026px) {
+    @content;
+  }
+}
+@mixin ex_large_max {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}

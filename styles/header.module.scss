@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Praise&display=swap");
+@import "mixins";
 
 .header__navigation {
   padding: 0.5rem 0.75rem;
@@ -6,6 +7,9 @@
   align-items: center;
   justify-content: space-between;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+  @include small {
+    display: none;
+  }
 
   .header__branding {
     font-family: "Praise", cursive;
@@ -19,9 +23,20 @@
   }
 
   .header__icon_links {
-    svg {
-      height: 1.5rem;
-      width: auto;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    .header__icon_link {
+      padding: 0rem 1rem;
+      margin-left: 0.5rem;
+      color: #2c3e50;
+      &:hover {
+        color: #2c3e50;
+      }
+      svg {
+        height: 1.5rem;
+        width: auto;
+      }
     }
   }
 }
